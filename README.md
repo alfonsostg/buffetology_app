@@ -12,6 +12,63 @@ A stock analysis tool based on Warren Buffett's investment principles. The app a
 - Configurable analysis parameters
 - Multiple output formats (table, CSV, JSON)
 
+## Project Architecture
+
+```mermaid
+graph TD
+    A[User Input] --> B[BuffetologyApp]
+    B --> C[Data Fetcher]
+    C --> D[Cache Manager]
+    D --> E[Yahoo Finance API]
+    B --> F[Analyzer]
+    F --> G[Quality Metrics]
+    F --> H[Value Metrics]
+    F --> I[Growth Metrics]
+    F --> J[Results Formatter]
+    J --> K[Output Formats]
+    K --> L[Table]
+    K --> M[CSV]
+    K --> N[JSON]
+```
+
+## Data Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant App
+    participant Cache
+    participant API
+    participant Analyzer
+    
+    User->>App: Run Analysis
+    App->>Cache: Check for cached data
+    alt Cache Hit
+        Cache-->>App: Return cached data
+    else Cache Miss
+        App->>API: Fetch stock data
+        API-->>App: Return stock data
+        App->>Cache: Store data
+    end
+    App->>Analyzer: Analyze stocks
+    Analyzer-->>App: Return analysis results
+    App-->>User: Display results
+```
+
+## Analysis Process
+
+```mermaid
+flowchart LR
+    A[Stock Data] --> B{Quality Check}
+    B -->|Pass| C[Value Analysis]
+    B -->|Fail| D[Reject]
+    C -->|Good Value| E[Growth Analysis]
+    C -->|Overvalued| D
+    E -->|Strong Growth| F[Recommend Buy]
+    E -->|Weak Growth| G[Recommend Hold]
+    E -->|Declining| H[Recommend Sell]
+```
+
 ## Installation
 
 1. Clone the repository:
