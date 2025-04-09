@@ -1,0 +1,21 @@
+balance:
+- Total Assets: 200
+  Total Liabilities: 80
+- Total Assets: 220
+  Total Liabilities: 85
+- Total Assets: 240
+  Total Liabilities: 90
+cash:
+- Free Cash Flow: 15
+  Operating Cash Flow: 20
+- Free Cash Flow: 17
+  Operating Cash Flow: 22
+- Free Cash Flow: 20
+  Operating Cash Flow: 25
+income:
+- Net Income: 10
+  Revenue: 100
+- Net Income: 12
+  Revenue: 110
+- Net Income: 15
+  Revenue: 121

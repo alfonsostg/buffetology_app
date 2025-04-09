@@ -1,0 +1,84 @@
+# Buffetology Analysis Configuration Example
+# Copy this file to config.yaml and modify according to your needs
+
+# Data Provider Configuration
+# -------------------------
+data_provider:
+  # Default data provider to use
+  # Options: yahoo, fmp, ft
+  default: "yahoo"
+  
+  # Yahoo Finance configuration
+  yahoo:
+    use_cache: true
+    cache_expiry_days: 7
+  
+  # Financial Modeling Prep configuration
+  # Requires API key from https://financialmodelingprep.com/
+  fmp:
+    api_key: ""  # Your FMP API key
+    use_cache: true
+    cache_expiry_days: 7
+  
+  # Financial Times configuration
+  # Requires FT subscription
+  ft:
+    username: ""  # Your FT username
+    password: ""  # Your FT password
+    use_cache: true
+    cache_expiry_days: 7
+
+# Analysis Configuration
+# --------------------
+analysis:
+  # Number of top S&P 500 stocks to analyze
+  # Set to 0 to disable S&P 500 analysis
+  sp500_top_n: 50
+  
+  # Custom list of tickers to analyze
+  # Example: ["AAPL", "MSFT", "GOOGL"]
+  custom_tickers: []
+  
+  # Minimum EPS growth rate required (15%)
+  min_eps_growth: 0.15
+  
+  # Minimum revenue growth rate required (10%)
+  min_revenue_growth: 0.10
+  
+  # Years of historical data to analyze
+  years_of_history: 10
+  
+  # Maximum acceptable debt to equity ratio (50%)
+  debt_to_equity_threshold: 0.5
+  
+  # Minimum current ratio required (2.0)
+  min_current_ratio: 2.0
+  
+  # Minimum return on equity required (15%)
+  min_roe: 0.15
+
+# Cache Configuration
+# -----------------
+cache:
+  # Base directory for cached data
+  base_directory: "cache"
+  
+  # Enable/disable caching globally
+  enabled: true
+  
+  # Global cache expiry in days
+  # This is used if not specified by provider
+  global_expiry_days: 7
+
+# Output Configuration
+# ------------------
+output:
+  # Output format
+  # Options: table, csv, json
+  format: "table"
+  
+  # Field to sort results by
+  sort_by: "quality_score"
+  
+  # Sort in descending order
+  descending: true 

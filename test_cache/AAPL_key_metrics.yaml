@@ -1,0 +1,24 @@
+- metric: Market Cap
+  value: 1000000000.0
+- metric: Forward P/E
+  value: 15.5
+- metric: Trailing P/E
+  value: 16.2
+- metric: P/B
+  value: 5.4
+- metric: ROE
+  value: 0.25
+- metric: ROA
+  value: 0.15
+- metric: Current Ratio
+  value: 2.1
+- metric: Debt/Equity
+  value: 0.45
+- metric: Profit Margin
+  value: 0.2
+- metric: Revenue Growth
+  value: 0.15
+- metric: Earnings Growth
+  value: 0.18
+- metric: PEG Ratio
+  value: 1.2

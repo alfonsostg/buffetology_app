@@ -1,0 +1,43 @@
+# Buffetology Analysis Configuration
+
+# Data Provider Settings
+data_provider:
+  default: "yahoo"  # Options: yahoo, fmp, financial_times
+  yahoo:
+    # No API key needed for Yahoo Finance
+  fmp:
+    api_key: ""  # Add your FMP API key here
+  financial_times:
+    username: ""  # Add your Financial Times username here
+    password: ""  # Add your Financial Times password here
+
+# Analysis Parameters
+analysis:
+  number_of_tickers: 50  # Number of top S&P 500 tickers to analyze
+  sp500_top_n: 50  # Number of top S&P 500 stocks to analyze
+  years_of_history: 5  # Number of years of historical data to analyze
+  debt_to_equity_threshold: 0.5  # Maximum acceptable debt-to-equity ratio
+  min_current_ratio: 1.5  # Minimum current ratio
+  custom_tickers: []  # List of specific tickers to analyze (optional)
+  min_eps_growth: 0.10  # Minimum EPS growth rate
+  min_revenue_growth: 0.10  # Minimum revenue growth rate
+  min_roe: 0.15  # Minimum return on equity
+  min_net_margin: 0.10  # Minimum net profit margin
+  max_pe_ratio: 25  # Maximum P/E ratio
+  max_pb_ratio: 3  # Maximum P/B ratio
+  max_debt_to_equity: 0.5  # Maximum debt to equity ratio
+  min_earnings_growth: 0.10  # Minimum earnings growth rate
+  min_fcf_growth: 0.10  # Minimum free cash flow growth rate
+  min_market_cap: 1000000000  # Minimum market cap (1 billion USD)
+
+# Cache Settings
+cache:
+  enabled: true
+  directory: "cache"  # Directory to store cached data
+  expiry_days: 7  # Number of days before cached data expires
+
+# Output Settings
+output:
+  format: "table"  # Options: table, csv, json
+  sort_by: "quality_score"  # Sort results by this metric
+  descending: true  # Sort in descending order 
