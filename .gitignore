@@ -32,7 +32,8 @@ env/
 *.swo
 
 # Project specific
-cache/
+test_cache/
+data_cache/
 *.log
 .env
 
