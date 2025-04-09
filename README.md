@@ -22,13 +22,23 @@ cd buffetology_app
 
 2. Create a virtual environment (recommended):
 ```bash
-python -m venv venv
+python -m venv buffetology
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+Or in conda:
+```bash
+conda create -n buffetology python=3.10
+conda activate buffetology
 ```
 
 3. Install dependencies:
 ```bash
 pip install -r requirements.txt
+```
+
+4. Install the package in development mode:
+```bash
+pip install -e .
 ```
 
 ## Usage
@@ -95,6 +105,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- Inspired by Mary Buffett's "Buffettology" book
+- Inspired by Mary Buffett's "Buffetology" book
 - Uses various financial data providers
 - Built with Python and modern software engineering practices 
